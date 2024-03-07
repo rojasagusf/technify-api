@@ -1,0 +1,24 @@
+# common project
+**/.classpath
+**/.dockerignore
+**/.git
+**/.gitignore
+**/.project
+**/.settings
+**/.toolstarget
+**/.vs
+**/.vscode
+**/*.*proj.user
+**/*.dbmdl
+**/*.jfm
+**/azds.yaml
+**/charts
+**/docker-compose*
+**/node_modules
+**/npm-debug.log
+**/obj
+**/secrets.dev.yaml
+**/values.dev.yaml
+**/.composer
+LICENSE
+README.md
