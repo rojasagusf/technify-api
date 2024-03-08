@@ -1,31 +1,31 @@
 'use strict';
 const models = require('../../src/models');
-const { initializeApi } = require('../../app');
+const {initializeApi} = require('../../app');
 const logger = require('../../src/utils/logger');
 
 function initDb() {
-	return models
-		.initDatabase()
-		.then(() => {
-			return initializeApi();
-		})
-		.catch((error) => {
-			logger.error('APP STOPPED');
-			logger.error(error.stack);
-			return process.exit(1);
-		});
+    return models
+        .initDatabase()
+        .then(() => {
+            return initializeApi();
+        })
+        .catch((error) => {
+            logger.error('APP STOPPED');
+            logger.error(error.stack);
+            return process.exit(1);
+        });
 }
 
 function start() {
-	return initializeApi();
+    return initializeApi();
 }
 
 function finish() {
-	return models.removeAllDatabase();
+    return models.removeAllDatabase();
 }
 
 module.exports = {
-	start,
-	finish,
-	initDb,
+    start,
+    finish,
+    initDb
 };
