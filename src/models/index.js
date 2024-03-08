@@ -47,13 +47,13 @@ function waitInterval(seconds) {
     });
 }
 
-const connectToDB = async(sequelizes) => {
+const connectToDB = async() => {
     let attemp = 0;
     let isConnected = false;
 
     const tryConnection = async() => {
         try {
-            await sequelizes.authenticate();
+            await sequelize.authenticate();
             isConnected = true;
         } catch (_error) {
             await waitInterval(DATABASE_INTERVAL_CONNECTION);
